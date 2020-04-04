@@ -1,4 +1,5 @@
 name = "website"
+type = "javascript"
 account_id = ""
 workers_dev = false
 route = "www.jamesridgway.co.uk/*"
