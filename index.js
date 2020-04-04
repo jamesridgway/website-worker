@@ -22,12 +22,12 @@ async function createResponse(req) {
 	
 	let response = await fetch(url, init)
 	let newHdrs = new Headers(response.headers)
-    newHdrs.set("Strict-Transport-Security", "max-age=31536000; includeSubdomains; preload")
-    newHdrs.set("X-Content-Type-Options", "nosniff")
-    newHdrs.set("X-Frame-Options", "DENY")
-    newHdrs.set("X-XSS-Protection", "1; mode=block")
-    newHdrs.set("Referrer-Policy", "same-origin")
-    newHdrs.set("feature-policy", "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'")
+       newHdrs.set("Strict-Transport-Security", "max-age=31536000; includeSubdomains; preload")
+       newHdrs.set("X-Content-Type-Options", "nosniff")
+       newHdrs.set("X-Frame-Options", "DENY")
+       newHdrs.set("X-XSS-Protection", "1; mode=block")
+       newHdrs.set("Referrer-Policy", "same-origin")
+       newHdrs.set("feature-policy", "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'")
 
 	let urlPath = new URL(req.url).pathname
 	if (urlPath === '/ghost' || urlPath === '/ghost/') {
